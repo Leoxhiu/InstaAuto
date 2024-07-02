@@ -9,19 +9,19 @@ For Windows
 4. Adjust configuration based on your preference, replace
 USERNAME=(your instagram account username)
 PASSWORD=(your instagram account password)
-TARGET_POST=(url,link of post/reel to be shared)
-USER_PER_BATCH=(number of users to share post at one time)
+TARGET_POST=(url/link of post/reel to be shared)
+USER_PER_BATCH=(number of users to share post with at one time)
 
 5. Open CMD
 
-6. Type 
+6. Type and enter
 -> cd Desktop/InstaAuto
 
-7. Type
+7. Type and enter
 -> ./env/Scripts/activate
 
-8. Type
+8. Type and enter
 -> pip install -r .\requirements.txt
 
-9. Type
+9. Type and enter
 -> python main.py
