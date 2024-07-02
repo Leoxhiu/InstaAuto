@@ -13,8 +13,8 @@ from selenium.common.exceptions import TimeoutException
 
 # Setup environment
 load_dotenv()
-USERNAME = os.getenv('USERNAME')
-PASSWORD = os.getenv('PASSWORD')
+USERNAME = os.getenv('INSTA_USERNAME')
+PASSWORD = os.getenv('INSTA_PASSWORD')
 TARGET_POST = os.getenv('TARGET_POST')
 USER_PER_BATCH = int(os.getenv('USER_PER_BATCH'))
 
