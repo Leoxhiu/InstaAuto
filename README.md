@@ -15,8 +15,8 @@ Automate targeted post/reel sharing to multiple users.
 4. Open .env with notepad
 
 5. Adjust configuration in .env based on your preference, replace _italic words_ directly
-    - USERNAME=_(your instagram account username)_
-    - PASSWORD=_(your instagram account password)_
+    - INSTA_USERNAME=_(your instagram account username)_
+    - INSTA_PASSWORD=_(your instagram account password)_
     - TARGET_POST=_(url/link of post/reel to be shared)_
     - USER_PER_BATCH=_(number of users to share post with at one time)_
 
