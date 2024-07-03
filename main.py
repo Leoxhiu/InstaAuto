@@ -17,6 +17,7 @@ USERNAME = os.getenv('INSTA_USERNAME')
 PASSWORD = os.getenv('INSTA_PASSWORD')
 TARGET_POST = os.getenv('TARGET_POST')
 USER_PER_BATCH = int(os.getenv('USER_PER_BATCH'))
+REST_AFTER_BATCH = int(os.getenv('REST_AFTER_BATCH'))
 
 # Setup selenium driver
 service = Service(executable_path="chromedriver.exe")
@@ -74,6 +75,7 @@ for user in users:
     # Find and click the first user
     try:
         # Wait for the first user to be clickable, adjust timeout as necessary
+        time.sleep(10)
         first_user = WebDriverWait(driver, 15).until(EC.element_to_be_clickable((By.XPATH, '//div[@class="x1n2onr6"]/span/img')))
         first_user.click()
         count+=1
@@ -84,7 +86,7 @@ for user in users:
 
         # Send the post when hit target number of selected users
         if count==USER_PER_BATCH or total_steps == len(users):
-            time.sleep(50)
+            time.sleep(5)
             try:
                 # Wait for the element to be clickable based on its text content
                 send_button = WebDriverWait(driver, 10).until(
@@ -99,7 +101,8 @@ for user in users:
 
             # Reset count and refresh webpage, rest for 15 minutes
             count=0
-            time.sleep(900)
+            rest_time = REST_AFTER_BATCH * 60
+            time.sleep(rest_time)
 
             # Refresh page
             driver.refresh()

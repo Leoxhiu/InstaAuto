@@ -11,6 +11,7 @@ INSTA_USERNAME=(your instagram account username)
 INSTA_PASSWORD=(your instagram account password)
 TARGET_POST=(url/link of post/reel to be shared)
 USER_PER_BATCH=(number of users to share post with at one time)
+REST_AFTER_BATCH=(minutes for program rest after running one batch)
 
 5. Open CMD
 
