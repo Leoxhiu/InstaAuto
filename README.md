@@ -19,6 +19,7 @@ Automate targeted post/reel sharing to multiple users.
     - INSTA_PASSWORD=_(your instagram account password)_
     - TARGET_POST=_(url/link of post/reel to be shared)_
     - USER_PER_BATCH=_(number of users to share post with at one time)_
+    - REST_AFTER_BATCH=_(minutes for program rest after running one batch)_
 
 6. Launch CMD
 
