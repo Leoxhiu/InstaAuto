@@ -47,11 +47,6 @@ password.send_keys(PASSWORD)
 login = driver.find_element(By.CSS_SELECTOR, "button[type='submit']")
 login.click()
 
-# "Not Now" for save login info
-time.sleep(5)
-notnow = driver.find_element(By.CSS_SELECTOR, "._a9--._ap36._a9_1")
-notnow.click()
-
 # Go to post
 time.sleep(5)
 post=TARGET_POST
