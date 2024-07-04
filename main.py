@@ -69,8 +69,8 @@ for user in users:
 
     # Find and click the first user
     try:
-        # Wait for the first user to be clickable, adjust timeout as necessary
-        time.sleep(10)
+        # Wait for the first user to be clickable
+        time.sleep(5)
         first_user = WebDriverWait(driver, 15).until(EC.element_to_be_clickable((By.XPATH, '//div[@class="x1n2onr6"]/span/img')))
         first_user.click()
         count+=1
@@ -117,4 +117,7 @@ for user in users:
                 driver.quit()
 
     except TimeoutException:
+        search_bar = driver.find_element(By.CSS_SELECTOR, "input[name='queryBox']")
+        driver.execute_script("arguments[0].value = '';", search_bar)
         print("User not found or clickable within 10 seconds")
+        continue
