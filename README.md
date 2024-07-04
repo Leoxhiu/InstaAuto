@@ -1,5 +1,5 @@
 ## Description
-This is a simple python script built with selenium library.
+This is a simple python application mainly built with selenium library.
 
 ## Goal
 Automate targeted post/reel sharing to multiple users.
